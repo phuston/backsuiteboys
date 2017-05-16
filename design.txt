@@ -1,0 +1,48 @@
+USE CASE EXPLORATION
+--------------------
+Ideas for features: 
+
+1. Play music through barcode scans
+2. Gather suite
+3. Change light levels
+4. Modify music playback settings - volume up/down, skip, restart, etc. 
+
+You should be able to queue songs - scanning a new song 
+
+You should be able to text it songs - sms interface ftw
+
+
+ARCHITECTURAL SPECS
+-------------------
+Commands are essentially lists composed of 
+
+[CommandName, arg1, arg2, ... , END]
+
+Some commands don't have arguments, and will be completed in one scan
+
+e.g. [SUMMON_ALL_MEMBERS], [LETS_GET_IT_ON]
+
+The commands will be stored in a command spec JSON config file
+
+We will also need another config file 'music.json' or 'songs.json' + 'albums.json' + 'playlists.json' that maps barcodes to song ids
+
+
+Should write a command spec for each command 
+
+
+TODO in terms of design:
+
+-How can new songs, albums, playlists be easily added to the library without having to write to the config files directly? What interface makes most sense for this?
+
+
+
+Iteration 1
+-----------
+Scan barcode -> song immediately plays on mopidy server through spotify
+
+
+Iteration 2
+-----------
+Scan ACTION, ARG(S), FINISH -> action interpreter parses the command and executes using the corresponding class
+
+
