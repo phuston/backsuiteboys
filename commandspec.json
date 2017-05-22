@@ -1,0 +1,9 @@
+{
+	"cmd_prefixes": {
+		"0" : "PlAYBACKCONTROL",
+		"1" : "SYS_WIDE_ACTION"
+		"2" : "LIGHTING",
+		"3" : "MESSAGING",
+		"4" : "PHYSICAL INTERFACING"
+	}
+}
