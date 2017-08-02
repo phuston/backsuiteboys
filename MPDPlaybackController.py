@@ -7,7 +7,7 @@ from mpd import MPDClient
 
 class MPDPlaybackController:
 	"""
-	Does all the playback control things
+	Handles all playback control
 	"""
 
 	def __init__(self):
